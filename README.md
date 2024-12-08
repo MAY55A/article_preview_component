@@ -24,16 +24,16 @@ Users should be able to:
 
 Mobile layout
 
-![](./Screenshot_mobile.png_)
+![](./Screenshot_mobile.png)
 
 Desktop layout
 
-![](./Screenshot_desktop.png_)
+![](./Screenshot_desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/responsive-article-preview-component-with-mobile-first-workflow-tTgCU4Yqgd
+- Live Site URL: https://may55a.github.io/article_preview_component/
 
 ## Built with
 
