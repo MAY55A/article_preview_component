@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@500;700);
+
+
+:root {
+    --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    color: var(--Desaturated-Dark-Blue);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-card {
+    width: 25em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.8em;
+    box-shadow: 10px 20px 50px 10px hsla(217, 19%, 35%, 0.1);
+}
+
+.article-image {
+    background-image: url("images/drawers.jpg");
+    background-size: cover;
+    border-top-right-radius: 0.8em;
+    border-top-left-radius: 0.8em;
+    height: 17em;
+}
+
+.article-details {
+    padding: 40px 34px 10px 34px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.article-description {
+    padding-bottom: 20px;
+}
+
+.article-meta {
+    position: relative;
+}
+
+.default, .share {
+    position: absolute;
+    top: -8px;
+    left: -34px;
+    width: 25em;
+    align-items: center;
+    border-bottom-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+}
+
+.author-image {
+    width: 40px;
+    border-radius: 20px;
+    margin: 0 15px 0 34px;
+}
+
+.author-name {
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 700;
+}
+
+.date {
+    color: var(--Grayish-Blue);
+}
+
+.share-btn {
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    background-color: var(--Light-Grayish-Blue);
+    padding: 10px 9px 5px 9px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.default {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 0 20px 0;
+    background-color: white;
+}
+
+.share {
+    z-index: 0;
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 22px 0;
+
+
+    > div {
+        display: flex;
+        width: 90%;
+        margin-left: 35px;
+    }
+
+    span {
+        color: var(--Grayish-Blue);
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        margin-right: 15px;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 55em){
+
+    .article-card {
+        flex-direction: row;
+        width: 57em;
+        height: 300px;
+    }
+
+    .article-image {
+        border-bottom-left-radius: 0.8em;
+        border-top-left-radius: 0.8em;
+        border-top-right-radius: 0;
+        flex: 0 0 41%;
+        background-size: cover;
+        height: auto;
+    }
+
+    .article-title {
+        font-size: 1.5em;
+    }
+
+    .article-description {
+        padding-bottom: 10px;
+    }
+
+    .share {
+        display: none;
+        top: -80px;
+        left: 61%;
+        width: 15rem;
+        padding: 14px 0;
+        align-items: center;
+        border-top-right-radius: 0.8em;
+        border-top-left-radius: 0.8em;
+        box-shadow: 0px 4px 7px 7px hsla(217, 19%, 35%, 0.1);
+
+        > div {
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+    }
+    .share::before {
+        --width: 1.5rem;
+        content: "";
+        position: absolute;
+        margin-bottom: 1.5rem;
+        top: calc(100% - 2px);
+        height: 1rem;
+        width: 2.25rem;
+        left: calc(50% - var(--width) / 2);
+        clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%);
+        background-color: var(--Dark-Grayish-Blue);
+        box-shadow: 0px 4px 7px 7px hsla(217, 19%, 35%, 0.1);
+    }
+
+
+}
+.visible {
+    z-index: 1;
+    display: flex;
+}
+.visible + .share-btn {
+    background-color: var(--Desaturated-Dark-Blue);
+    path {
+        fill: var(--Light-Grayish-Blue);
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--Dark-Grayish-Blue); }
